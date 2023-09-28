@@ -5,6 +5,7 @@ var score = 0
 var lives = 0
 var time = 0
 var nuke = 0
+var Player = null
 
 func _ready():
 	process_mode = Node.PROCESS_MODE_ALWAYS
