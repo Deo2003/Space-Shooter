@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://bbimt54mnhyt5"]
+[gd_scene load_steps=5 format=3 uid="uid://bbimt54mnhyt5"]
 
 [ext_resource type="FontFile" uid="uid://ddddlbou8anwq" path="res://Assets/SPACEBOY.TTF" id="1_a1hub"]
 [ext_resource type="Script" path="res://UI/end_game.gd" id="1_headi"]
 [ext_resource type="FontFile" uid="uid://caqp2gn8ma56w" path="res://Assets/SPACEBIT.TTF" id="2_l6u65"]
+[ext_resource type="Texture2D" uid="uid://bmmiuxr6fbm" path="res://Assets/1x/8-peKF18pXUzzjCFq.png" id="2_tpl8m"]
 
 [node name="End_Game" type="Control"]
 layout_mode = 3
@@ -12,6 +13,11 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_headi")
+
+[node name="Background" type="Sprite2D" parent="."]
+position = Vector2(328, 33)
+scale = Vector2(4.82617, 3.54986)
+texture = ExtResource("2_tpl8m")
 
 [node name="Label" type="Label" parent="."]
 layout_mode = 1

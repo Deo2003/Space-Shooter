@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://cbqodsu1upxfc"]
+[gd_scene load_steps=5 format=3 uid="uid://cbqodsu1upxfc"]
 
 [ext_resource type="FontFile" uid="uid://ddddlbou8anwq" path="res://Assets/SPACEBOY.TTF" id="1_2akby"]
 [ext_resource type="Script" path="res://UI/main_menu.gd" id="1_n2kl8"]
 [ext_resource type="FontFile" uid="uid://caqp2gn8ma56w" path="res://Assets/SPACEBIT.TTF" id="2_4o3vd"]
+[ext_resource type="Texture2D" uid="uid://byok8ibthp8k8" path="res://Assets/1x/8-e0WPLLzybywfiOb (1).png" id="4_girx3"]
 
 [node name="Main_Menu" type="Control"]
 layout_mode = 3
@@ -12,6 +13,11 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_n2kl8")
+
+[node name="Background" type="Sprite2D" parent="."]
+position = Vector2(567, 285)
+scale = Vector2(2.57617, 2.57617)
+texture = ExtResource("4_girx3")
 
 [node name="Label" type="Label" parent="."]
 layout_mode = 1

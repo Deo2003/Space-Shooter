@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://Player/ShipH.gd" id="1_ckxyj"]
 [ext_resource type="Texture2D" uid="uid://b18wspiqgrcnl" path="res://Assets/Exhaust.png" id="2_kwkky"]
-[ext_resource type="Texture2D" uid="uid://66qrg88tqgwg" path="res://Assets/ship_H.png" id="3_2i4bq"]
+[ext_resource type="Texture2D" uid="uid://drravdg7vtl8w" path="res://Assets/1x/Ship H.png" id="3_48tvn"]
 
 [node name="Player" type="CharacterBody2D"]
 script = ExtResource("1_ckxyj")
@@ -14,14 +14,16 @@ position = Vector2(0, 50)
 texture = ExtResource("2_kwkky")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("3_2i4bq")
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("3_48tvn")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
-polygon = PackedVector2Array(5, -25.2, 5, -22.5, 28.3, 16, 27.2, 18, 25.6, 18, 22.1, 20.3, 20, 19.2, 20, 18.5, 13.3, 16.5, -0.700001, 28.4, -3, 27.3, -3, 25.8, -12.8, 16, -13.5, 16, -21.5, 20, -24.8, 20, -28, 16.8, -28, 14.4, -3, -25.6, -3, -29.2)
+scale = Vector2(0.25, 0.25)
+polygon = PackedVector2Array(8.5, -164.8, 8.5, -161.4, 41.9, -67, 44.6, -67, 60.5, -64.7, 60.5, -63.1, 69, -58, 76.6, -58, 202.5, -42.9, 202.5, -30, 191.2, -22, 187.8, -22, 93.5, 18.3, 93.5, 19.8, 46.3, 68, 40.1, 68, 35.1, 55, 34.5, 55.3, 31.5, 60.5, 31.5, 96, 29, 96, 23.5, 99.3, 21.5, 98.2, 21.5, 97.1, 18.5, 95.1, 18.5, 92.4, 17.1, 88.7, 9.5, 113.3, 9.5, 163, 7.89999, 163, 6.60001, 167, -4.5, 167, -4.5, 166, -7.39999, 116, -8.10001, 116, -14.8, 88.3, -15.8, 94, -17.5, 94, -20.5, 98, -25.3, 98, -29.5, 93.8, -29.5, 62, -31.9, 57, -33.1, 57, -33.6, 56.7, -36, 65, -38, 65, -46.5, 69.2, -46.5, 65.8, -90.5, 23.9, -90.5, 19.5, -90.8, 19, -91.9, 19, -185.5, -19.7, -185.5, -20.8, -202.5, -29.7, -202.5, -41.2, -195.9, -44, -186.7, -44, -70.5, -57.8, -70.5, -59, -65.5, -59, -57.1, -65, -51.7, -65, -43.3, -65.8, -5.5, -166.4, -5.5, -167, 6.5, -167)
 
 [node name="Area2D" type="Area2D" parent="."]
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D"]
-polygon = PackedVector2Array(0, -35, 35, 17, 25, 25, 13, 21, 0, 34, -17, 20, -26, 28, -35, 15)
+polygon = PackedVector2Array(1, -48, 16, -22, 57, -13, 58, -6, 26, 13, 9, 31, 8, 49, -6, 50, -9, 33, -26, 12, -56, -5, -56, -17, -15, -20)
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

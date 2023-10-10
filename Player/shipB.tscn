@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://Player/ShipB.gd" id="1_wrekl"]
 [ext_resource type="Texture2D" uid="uid://b18wspiqgrcnl" path="res://Assets/Exhaust.png" id="2_bjfj3"]
-[ext_resource type="Texture2D" uid="uid://d2s33l3eo63id" path="res://Assets/ship_B.png" id="3_43huf"]
+[ext_resource type="Texture2D" uid="uid://d0lbaywoyotw8" path="res://Assets/Ship C.png" id="3_87hyv"]
 
 [node name="Player" type="CharacterBody2D"]
 script = ExtResource("1_wrekl")
@@ -14,14 +14,16 @@ position = Vector2(0, 50)
 texture = ExtResource("2_bjfj3")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("3_43huf")
+scale = Vector2(0.15, 0.15)
+texture = ExtResource("3_87hyv")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
-polygon = PackedVector2Array(5, -17.2, 5, -13.3, 12.7, 11, 9.7, 11, -0.6, 20.4, -3, 19.3, -3, 17.9, -12, 9.9, -12, 4.6, -3, -17.6, -3, -21.2)
+scale = Vector2(0.15, 0.15)
+polygon = PackedVector2Array(21.5, -119.7, 21.5, -117.6, 35.9, -82, 49.5, -68.8, 49.5, -66.3, 52.8, -59, 54, -59, 103.5, -35.3, 103.5, -34.1, 123.1, -21, 125, -21, 169.5, 0.800003, 169.5, 14.4, 167.5, 17, 161.8, 17, 86.8, 41, 82.9, 41, 65.5, 44.7, 65.5, 56.1, 62.3, 92, 60.7, 92, 56.7, 100, 50.7, 100, 34.7, 85.6, 45.5, 119.7, 45.5, 125.1, 44.5, 134, 30.1, 134, 22.5, 123, 20.7, 123, 12, 114.3, 2.7, 132, -3.2, 132, -8.5, 128, -8.5, 124.3, -10.3, 118.2, -29.4, 134, -42.5, 134, -42.5, 133, -44.1, 127, -42, 127, -28.2, 82.4, -42.7, 96, -44.7, 96, -50.7, 102, -57.5, 102, -57.5, 99.8, -61.5, 95.8, -61.5, 45, -62.8, 45, -112.5, 31.5, -112.5, 30.4, -150.9, 17, -154.7, 17, -169.5, 14.7, -169.5, 12.4, -169.5, 1, -168.9, 1, -141.5, -11.3, -141.5, -12.1, -120.1, -26, -118, -26, -61.5, -53.3, -61.5, -54.1, -39.5, -68.1, -13.7, -117, -12.6, -117, -1.5, -133.6, 10.5, -134)
 
 [node name="Area2D" type="Area2D" parent="."]
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D"]
-polygon = PackedVector2Array(0, -24, 17, 10, -1, 24, -17, 9)
+polygon = PackedVector2Array(-1, -25, 6, -21, 9, -13, 28, -1, 28, 6, 13, 9, 10, 17, 5, 24, -6, 23, -10, 17, -12, 8, -31, 3, -29, -2, -8, -12, -5, -21)
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
